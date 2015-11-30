@@ -111,3 +111,8 @@ Improvement features:
         - getRegData function takes input only from static file right now (server.js)
         Proposal: input of the getRegData should be get from the browser every time we access /register path of app.
 ```
+####Lists of to do features:
+
+-  Our app should also provide gravatar service. This means that when we create a user besides main credentials input we should also require and store other type of information and mainly an avatar picture. In this way when some other service will use our oAuth it will get also the avatar picture of the user. User will benefit of not uploading manually his/her avatar on all the websites that will use the same  account.
+
+-  Another feature that will help us to promote is advertising. When some other service will use our token we will post something on that service to get more traffic of our main service. From this feature we will get not only our own promotion but also we can make some money by providing promoting service as well.
