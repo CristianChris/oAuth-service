@@ -85,3 +85,31 @@ Now let’s pass in the token that was created before in our HTTP header as `x-a
 We can also pass it in as a URL parameter by going to: `http://localhost:8080/api/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWZmOTgwYTA0Y2I0OTQyMDI1NzVjN2QiLCJlbWFpbCI6ImV4ZW1wbGUxLmNhcnRvZmVhbnVAZ21haWwuY29tIiwibmFtZV9zdXJuYW1lIjoiQ3Jpc3RpYW4gQ2FydG9mZWFudSIsInBhc3N3b3JkIjoicXdlcnR5IiwiYWRtaW4iOnRydWUsImxhc3RfbG9naW4iOiI4OjQyOjMyIEFNIiwidG9rZW4iOiIwIiwiX192IjowfQ.IMvPP40gm6bBwD4inzeDWCkV1pVQO_d1W-ey6NyABJI`
 ![alt tag](https://github.com/CristianChris/oAuth-service-which-will-represent-an-API-with-requests/blob/master/Images/9.png "accesing api with token from browser URL")
 
+####What will be future difficulties in design and implementation of this app?
+The only difficulties I see in order to implement this oAuth-service is the necessity of using mongoldb and express framework. If for example our actual application is running on another database type Oracle SQL, PostgreSQL, etc.. we need to reconstruct the way we store the users with their credentials. This is very time consuming process, and probably not so efficient for node.js to use another database type.
+Also here we use express framework, this means that our app that will implement this prototype should also be written in express framework. If our app is using another framework of node.js we need to start over the architecture of our app.
+
+####Is this application useful and if not, how I can make it so?
+Right now this application is not very useful mainly because of the process of creating a user.
+To be useful we need to modify the process of creating a user, right now we create a user by parsing the credentials from the server.js that was manually inserted. Ideally we need manually insert the credentials of a new user every time we access http://localhost:8080/register address.
+In this way every time we will want to create a new user we do not need to shut down the server as it is now.
+
+Another bad aspect of this application is the process of recovery the already created user password. Right now if we forget the user password we can do anything anymore because password recovery feature is missing.
+
+
+####Lists of to do features:
+
+Task: Implement getRegData function.
+
+Realization in pseudocode:
+        function getRegData (email, name_surname, password, admin) -> /register {
+            return user;
+        }
+Technical Issues:
+        - Result of getRegData operation cannot be repeated with the same input. Otherwise
+        we will create the same user with the same credentials multiple times.
+        Solution: to use data input validation
+
+Improvement features:
+        - getRegData function takes input only from static file right now (server.js)
+        Proposal: input of the getRegData should be get from the browser every time we access /register path of app.
