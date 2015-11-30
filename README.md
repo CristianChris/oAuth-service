@@ -96,9 +96,6 @@ In this way every time we will want to create a new user we do not need to shut 
 
 Another bad aspect of this application is the process of recovery the already created user password. Right now if we forget the user password we can do anything anymore because password recovery feature is missing.
 
-
-####Lists of to do features:
-
 Task: Implement getRegData function.
 
 Realization in pseudocode:
