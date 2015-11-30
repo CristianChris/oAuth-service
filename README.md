@@ -97,7 +97,7 @@ In this way every time we will want to create a new user we do not need to shut 
 Another bad aspect of this application is the process of recovery the already created user password. Right now if we forget the user password we can do anything anymore because password recovery feature is missing.
 
 Task: Implement getRegData function.
-
+```
 Realization in pseudocode:
         function getRegData (email, name_surname, password, admin) -> /register {
             return user;
@@ -110,3 +110,4 @@ Technical Issues:
 Improvement features:
         - getRegData function takes input only from static file right now (server.js)
         Proposal: input of the getRegData should be get from the browser every time we access /register path of app.
+```
