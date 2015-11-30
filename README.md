@@ -91,7 +91,7 @@ Also here we use express framework, this means that our app that will implement 
 
 ####Is this application useful and if not, how I can make it so?
 Right now this application is not very useful mainly because of the process of creating a user.
-To be useful we need to modify the process of creating a user, right now we create a user by parsing the credentials from the server.js that was manually inserted. Ideally we need manually insert the credentials of a new user every time we access http://localhost:8080/register address.
+To be useful we need to modify the process of creating a user, right now we create a user by parsing the credentials from the server.js that was manually inserted. Ideally we need manually insert the credentials of a new user every time we access http://localhost:8080/register address in browser.
 In this way every time we will want to create a new user we do not need to shut down the server as it is now.
 
 Another bad aspect of this application is the process of recovery the already created user password. Right now if we forget the user password we can do anything anymore because password recovery feature is missing.
