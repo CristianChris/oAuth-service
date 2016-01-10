@@ -134,3 +134,6 @@ Improvement features:
 
 #### Login
 ![alt tag](https://github.com/CristianChris/oAuth-service-which-will-represent-an-API-with-requests/blob/master/Images/Login.png "Login")
+
+#### Get statistics
+![alt tag](https://github.com/CristianChris/oAuth-service-which-will-represent-an-API-with-requests/blob/master/Images/Statistics.png "Get statistics")
