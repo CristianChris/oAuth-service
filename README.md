@@ -1,4 +1,4 @@
-####Task: Develop an oAuth service which will represent an API with requests:
+####Task 1: Develop an oAuth service which will represent an API with requests:
 
 The main workflow of this is that we will:
 
@@ -85,11 +85,16 @@ Now let’s pass in the token that was created before in our HTTP header as `x-a
 We can also pass it in as a URL parameter by going to: `http://localhost:8080/api/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWZmOTgwYTA0Y2I0OTQyMDI1NzVjN2QiLCJlbWFpbCI6ImV4ZW1wbGUxLmNhcnRvZmVhbnVAZ21haWwuY29tIiwibmFtZV9zdXJuYW1lIjoiQ3Jpc3RpYW4gQ2FydG9mZWFudSIsInBhc3N3b3JkIjoicXdlcnR5IiwiYWRtaW4iOnRydWUsImxhc3RfbG9naW4iOiI4OjQyOjMyIEFNIiwidG9rZW4iOiIwIiwiX192IjowfQ.IMvPP40gm6bBwD4inzeDWCkV1pVQO_d1W-ey6NyABJI`
 ![alt tag](https://github.com/CristianChris/oAuth-service-which-will-represent-an-API-with-requests/blob/master/Images/9.png "accesing api with token from browser URL")
 
-####What will be future difficulties in design and implementation of this app?
+####Task 2: Answere to the following questions:
+* What will be future difficulties in design and implementation of this app?
+* Is this application useful and if not, how I can make it so?
+* Lists of to do features.
+
+###What will be future difficulties in design and implementation of this app?
 The only difficulties I see in order to implement this oAuth-service is the necessity of using mongoldb and express framework. If for example our actual application is running on another database type Oracle SQL, PostgreSQL, etc.. we need to reconstruct the way we store the users with their credentials. This is very time consuming process, and probably not so efficient for node.js to use another database type.
 Also here we use express framework, this means that our app that will implement this prototype should also be written in express framework. If our app is using another framework of node.js we need to start over the architecture of our app.
 
-####Is this application useful and if not, how I can make it so?
+###Is this application useful and if not, how I can make it so?
 Right now this application is not very useful mainly because of the process of creating a user.
 To be useful we need to modify the process of creating a user, right now we create a user by parsing the credentials from the server.js that was manually inserted. Ideally we need manually insert the credentials of a new user every time we access http://localhost:8080/register address in browser.
 In this way every time we will want to create a new user we do not need to shut down the server as it is now.
@@ -111,8 +116,15 @@ Improvement features:
         - getRegData function takes input only from static file right now (server.js)
         Proposal: input of the getRegData should be get from the browser every time we access /register path of app.
 ```
-####Lists of to do features:
+###Lists of to do features:
 
 -  Our app should also provide gravatar service. This means that when we create a user besides main credentials input we should also require and store other type of information and mainly an avatar picture. In this way when some other service will use our oAuth it will get also the avatar picture of the user. User will benefit of not uploading manually his/her avatar on all the websites that will use the same  account.
 
 -  Another feature that will help us to promote is advertising. When some other service will use our token we will post something on that service to get more traffic of our main service. From this feature we will get not only our own promotion but also we can make some money by providing promoting service as well.
+
+
+####Task 3: Define sequence diagram of these 4 oAuth features
+* Register
+* Login
+* Get statistics. History of user's tokens requests (logins)
+* One more
