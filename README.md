@@ -128,3 +128,6 @@ Improvement features:
 * Login
 * Get statistics. History of user's tokens requests (logins)
 * One more
+
+#### Register
+![alt tag](https://github.com/CristianChris/oAuth-service-which-will-represent-an-API-with-requests/blob/master/Images/Register.png "Register")
