@@ -140,3 +140,6 @@ Improvement features:
 
 #### Get last user login
 ![alt tag](https://github.com/CristianChris/oAuth-service-which-will-represent-an-API-with-requests/blob/master/Images/last_login.png "Get last user login")
+
+
+## I would like to thank Chris Sevilleja for his tutorial on scotch.io that guided this small project
